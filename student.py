@@ -61,14 +61,10 @@ class Piggy(pigo.Pigo):
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
         for x in range(5):
-            self.encL(5)
-            self.encR(5)
-            self.encR(5)
-            self.encL(5)
-            self.head_up()
-            self.head_down()
             self.encF(9)
             self.encB(9)
+
+
 
     def head_up(self):
         self.servo(self.MIDPOINT + 20)
