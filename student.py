@@ -60,14 +60,18 @@ class Piggy(pigo.Pigo):
         """executes a series of methods that add up to a compound dance"""
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
-        while True:
-            self.encF(18)
-            self.encR(5)
-            self.encL(5)
             self.encL(5)
             self.encR(5)
-            self.encB(18)
+            self.encR(5)
+            self.encL(5)
+            self.head_up()
+            self.head_down()
 
+        def head_up(self):
+            for x in range(self.MIDPOINT + 20, 5)
+
+        def head_down(self):
+            for x in range(self.MIDPOINT - 20, 5)
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
         self.wide_scan()
