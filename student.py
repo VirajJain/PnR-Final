@@ -64,6 +64,8 @@ class Piggy(pigo.Pigo):
         self.encR(5)
         self.encL(5)
         self.encB(18)
+        self.encF(18)
+        self.encB(18)
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
