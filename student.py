@@ -71,7 +71,7 @@ class Piggy(pigo.Pigo):
         self.servo(self.MIDPOINT + 20)
 
     def head_down(self):
-       self.servo(self.MIDPOINT - 20)
+        self.servo(self.MIDPOINT - 20)
 
 
 
