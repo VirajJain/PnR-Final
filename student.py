@@ -67,11 +67,14 @@ class Piggy(pigo.Pigo):
         self.head_up()
         self.head_down()
 
-        def head_up(self):
-            for x in range(self.MIDPOINT + 20, 5)
+    def head_up(self):
+        for x in range(self.MIDPOINT + 20, 5)
 
-        def head_down(self):
-            for x in range(self.MIDPOINT - 20, 5)
+    def head_down(self):
+        for x in range(self.MIDPOINT - 20, 5)
+
+
+
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
         self.wide_scan()
