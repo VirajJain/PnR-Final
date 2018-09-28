@@ -67,8 +67,8 @@ class Piggy(pigo.Pigo):
             self.encL(5)
             self.head_up()
             self.head_down()
-            self.encF(36)
-            self.encB(36)
+            self.encF(9)
+            self.encB(9)
 
     def head_up(self):
         self.servo(self.MIDPOINT + 20)
