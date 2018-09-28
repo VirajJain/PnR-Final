@@ -61,7 +61,7 @@ class Piggy(pigo.Pigo):
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
-        for x in range(6):
+        for x in range(4):
             self.encF(9)
             time.sleep(0.1)
             self.encB(9)
