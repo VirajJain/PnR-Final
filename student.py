@@ -68,10 +68,10 @@ class Piggy(pigo.Pigo):
         self.head_down()
 
     def head_up(self):
-        for x in range(self.MIDPOINT + 20, 5)
+        self.servo(self.MIDPOINT + 20)
 
     def head_down(self):
-        for x in range(self.MIDPOINT - 20, 5)
+       self.servo(self.MIDPOINT - 20)
 
 
 
