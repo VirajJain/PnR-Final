@@ -62,12 +62,14 @@ class Piggy(pigo.Pigo):
         ##### WRITE YOUR FIRST PROJECT HERE
         for x in range(7):
             self.encF(9)
-            time.sleep(0.5)
+            time.sleep(0.01)
             self.encB(9)
+            time.sleep(0.01)
         for x in range(3):
             self.head_up()
-            time.sleep(0.5)
+            time.sleep(0.01)
             self.head_down()
+            time.sleep(0.01)
 
     def head_up(self):
         self.servo(self.MIDPOINT + 20)
