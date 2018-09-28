@@ -65,6 +65,7 @@ class Piggy(pigo.Pigo):
             self.encB(9)
         for x in range(3):
             self.head_up()
+            time.sleep(0.5)
             self.head_down()
 
     def head_up(self):
