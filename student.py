@@ -62,7 +62,7 @@ class Piggy(pigo.Pigo):
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
         for x in range(3):
-            self.encF(9)
+            self.half_forward()
             time.sleep(0.12)
             self.encB(9)
             time.sleep(0.1)
@@ -78,8 +78,17 @@ class Piggy(pigo.Pigo):
     def head_down(self):
         self.servo(self.MIDPOINT - 20)
 
+    def forward(self):
+        self.encF(18)
 
+    def half_forward(self):
+        self.encF(9)
 
+    def backward(self):
+        self.encB(18)
+
+    def half_backward(self):
+        self.encB(9)
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
         self.wide_scan()
