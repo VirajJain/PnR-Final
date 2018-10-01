@@ -67,28 +67,29 @@ class Piggy(pigo.Pigo):
             self.half_backward(9)
             time.sleep(0.1)
         for x in range(5):
-            self.head_up()
+            self.head_left()
             time.sleep(0.01)
-            self.head_down()
+            self.head_right()
             time.sleep(0.1)
-
-    def head_up(self):
+"moving head left"
+    def head_left(self):
         self.servo(self.MIDPOINT + 20)
-
-    def head_down(self):
+"moving head right"
+    def head_right(self):
         self.servo(self.MIDPOINT - 20)
-
+"moving forward"
     def forward(self):
         self.encF(18)
-
+"moving a little forward"
     def half_forward(self):
         self.encF(9)
-
+"moving backward"
     def backward(self):
         self.encB(18)
-
+"moving a little backward"
     def half_backward(self):
         self.encB(9)
+
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
         self.wide_scan()
