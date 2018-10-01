@@ -64,7 +64,7 @@ class Piggy(pigo.Pigo):
         for x in range(4):
             self.half_forward()
             time.sleep(0.12)
-            self.half_backward(9)
+            self.half_backward()
             time.sleep(0.1)
         for x in range(5):
             self.head_left()
