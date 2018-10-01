@@ -75,10 +75,10 @@ class Piggy(pigo.Pigo):
         time.sleep(0.01)
         self.head_right()
         for x in range(3):
-        self.half_forward()
-        time.sleep(0.12)
-        self.half_backward()
-        time.sleep(0.1)
+            self.half_forward()
+            time.sleep(0.12)
+            self.half_backward()
+            time.sleep(0.1)
 
     "moving head left"
     def head_left(self):
