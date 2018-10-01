@@ -72,6 +72,9 @@ class Piggy(pigo.Pigo):
             time.sleep(0.01)
             self.head_right()
             time.sleep(0.1)
+        self.head_left()
+        time.sleep(0.01)
+        self.head_right()
     "moving head left"
     def head_left(self):
         self.servo(self.MIDPOINT + 20)
