@@ -64,6 +64,7 @@ class Piggy(pigo.Pigo):
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
+        #start at 27 seconds
         for x in range(2):
             for y in range(3):
                 self.half_forward()
