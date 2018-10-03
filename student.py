@@ -58,6 +58,8 @@ class Piggy(pigo.Pigo):
     # YOU DECIDE: How does your GoPiggy dance?
     def dance(self):
         """executes a series of methods that add up to a compound dance"""
+        if not self.safe_to_dance():
+            print("\n---- Not Safe to Dance----\n")
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
@@ -94,6 +96,15 @@ class Piggy(pigo.Pigo):
     "moving a little backward"
     def half_backward(self):
         self.encB(9)
+    def safe_to_dance(self):
+        """circles around and checks for obstacles"""
+        #check for problems
+        for x in range(4):
+            if not self.is_clear():
+                return false
+            self.encR(29.5/4)
+        #if we find no problems
+        return True
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
