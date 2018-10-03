@@ -104,7 +104,7 @@ class Piggy(pigo.Pigo):
         for x in range(4):
             if not self.is_clear():
                 return False
-            self.encL(29.5/4)
+            self.encL(9)
         # if we find no problems
         return True
 
