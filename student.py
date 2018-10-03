@@ -68,36 +68,58 @@ class Piggy(pigo.Pigo):
         for x in range(2):
             for y in range(3):
                 self.half_forward()
-                time.sleep(0.12)
+                self.chill_medium()
                 self.half_backward()
-                time.sleep(0.1)
+                self.chill_medium()
             for y in range(8):
                 self.head_left()
-                time.sleep(0.01)
+                self.chill_short()
                 self.head_right()
-                time.sleep(0.1)
+                self.chill_medium()
             self.head_left()
-            time.sleep(0.01)
+            self.chill_short()
             self.head_right()
+            self.move_left_fully()
 
-    "moving head left"
     def head_left(self):
+        """moving head left"""
         self.servo(self.MIDPOINT + 20)
-    "moving head right"
+
     def head_right(self):
+        """moving head right"""
         self.servo(self.MIDPOINT - 20)
-    "moving forward"
+
     def forward(self):
+        """moving forward"""
         self.encF(18)
-    "moving a little forward"
+
     def half_forward(self):
+        """moving a little forward"""
         self.encF(9)
-    "moving backward"
+
     def backward(self):
+        """moving backward"""
         self.encB(18)
-    "moving a little backward"
+
     def half_backward(self):
+        """"moving a little backward"""
         self.encB(9)
+
+    def move_left_fully(self):
+        """"rotate left a full circle"""
+        self.encL(28)
+
+    def chill_short(self):
+        """"not move for a short period of time"""
+        time.sleep(0.01)
+
+    def chill_medium(self):
+        """"not move for a reasonable amount of time"""
+        time.sleep(0.1)
+
+    def chill_long(self):
+        """not move for a long period of time"""
+        time.sleep(1)
 
     def safe_to_dance(self):
         """circles around and checks for obstacles"""
