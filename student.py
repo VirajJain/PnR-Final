@@ -60,6 +60,7 @@ class Piggy(pigo.Pigo):
         """executes a series of methods that add up to a compound dance"""
         if not self.safe_to_dance():
             print("\n---- Not Safe to Dance----\n")
+            return
         print("\n---- LET'S DANCE ----\n")
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
