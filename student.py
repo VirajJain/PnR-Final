@@ -64,12 +64,12 @@ class Piggy(pigo.Pigo):
         ##### WRITE YOUR FIRST PROJECT HERE
         #Ride, 21 Pilots
         for x in range(2):
-            for x in range(3):
+            for y in range(3):
                 self.half_forward()
                 time.sleep(0.12)
                 self.half_backward()
                 time.sleep(0.1)
-            for x in range(8):
+            for y in range(8):
                 self.head_left()
                 time.sleep(0.01)
                 self.head_right()
