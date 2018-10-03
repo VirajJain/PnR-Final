@@ -97,14 +97,15 @@ class Piggy(pigo.Pigo):
     "moving a little backward"
     def half_backward(self):
         self.encB(9)
+
     def safe_to_dance(self):
         """circles around and checks for obstacles"""
-        #check for problems
+        # check for problems
         for x in range(4):
             if not self.is_clear():
                 return False
-            self.encR(29.5/4)
-        #if we find no problems
+            self.encL(29.5/4)
+        # if we find no problems
         return True
 
     def obstacle_count(self):
