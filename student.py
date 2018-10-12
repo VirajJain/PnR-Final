@@ -79,7 +79,6 @@ class Piggy(pigo.Pigo):
             self.head_left()
             self.chill_short()
             self.head_right()
-            self.move_left_fully()
         self.finisher()
 
     def head_left(self):
