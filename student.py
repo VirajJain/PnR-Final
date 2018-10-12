@@ -80,6 +80,7 @@ class Piggy(pigo.Pigo):
             self.chill_short()
             self.head_right()
             self.move_left_fully()
+        self.finisher
 
     def head_left(self):
         """moving head left"""
@@ -109,6 +110,10 @@ class Piggy(pigo.Pigo):
         """"rotate left a full circle"""
         self.encL(28)
 
+    def move_right_fully(self):
+        '''rotate right a full circle'''
+        self.encR(28)
+
     def chill_short(self):
         """"not move for a short period of time"""
         time.sleep(0.01)
@@ -130,6 +135,17 @@ class Piggy(pigo.Pigo):
             self.encL(7)
         # if we find no problems
         return True
+
+    def finisher(self):
+        '''FINISH HIM'''
+        for x in range(4):
+            self.move_left_fully()
+            self.move_right_fully()
+            for y in range(4):
+                self.head_left()
+                self.head_right()
+                self.head_right()
+                self.head_left()
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
