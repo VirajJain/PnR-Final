@@ -144,8 +144,6 @@ class Piggy(pigo.Pigo):
             for y in range(4):
                 self.head_left()
                 self.head_right()
-                self.head_right()
-                self.head_left()
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
