@@ -80,6 +80,7 @@ class Piggy(pigo.Pigo):
             self.chill_short()
             self.head_right()
         self.finisher()
+        self.x_up()
 
     def head_left(self):
         """moving head left"""
@@ -143,6 +144,19 @@ class Piggy(pigo.Pigo):
             for y in range(4):
                 self.head_left()
                 self.head_right()
+
+###From Ricky
+    def x_up(self):
+        """supposed to make an X formation"""
+        for x in range(4):
+            self.encB(9)
+            self.encR(2)
+            self.encF(9)
+            self.encL(2)
+            self.encB(9)
+            self.encL(2)
+            self.encF(9)
+            self.encR(2)
 
     def obstacle_count(self):
         """scans and estimates the number of obstacles within sight"""
