@@ -80,6 +80,7 @@ class Piggy(pigo.Pigo):
             self.chill_short()
             self.head_right()
         self.finisher()
+        #THANKS RICKY
         self.x_up()
 
     def head_left(self):
