@@ -80,7 +80,7 @@ class Piggy(pigo.Pigo):
             self.chill_short()
             self.head_right()
             self.move_left_fully()
-        self.finisher
+        self.finisher()
 
     def head_left(self):
         """moving head left"""
