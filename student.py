@@ -139,11 +139,11 @@ class Piggy(pigo.Pigo):
     def finisher(self):
         '''FINISH HIM'''
         for x in range(4):
-            self.move_left_fully()
-            self.move_right_fully()
+            self.encL(28)
+            self.encR(28)
             for y in range(4):
-                self.head_left()
-                self.head_right()
+                self.servo(self.MIDPOINT + 20)
+                self.servo(self.MIDPOINT - 20)
 
 ###From Ricky
     def x_up(self):
