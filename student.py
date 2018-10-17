@@ -65,6 +65,7 @@ class Piggy(pigo.Pigo):
                 for x in range(4):
                     self.head_left()
                     self.head_right()
+                self.beShy()
                 self.set_speed(self.LEFT_SPEED, self.RIGHT_SPEED)
                 self.half_forward()
             time.sleep(.1)
