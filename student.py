@@ -65,12 +65,8 @@ class Piggy(pigo.Pigo):
                 for x in range(4):
                     self.head_left()
                     self.head_right()
-                self.encL(20)
-                self.set_speed(70, 70)
-                self.half_forward()
                 self.set_speed(self.LEFT_SPEED, self.RIGHT_SPEED)
-                self.encR(20)
-                self.encF(18)
+                self.half_forward()
             time.sleep(.1)
 
     # YOU DECIDE: How does your GoPiggy dance?
