@@ -65,11 +65,11 @@ class Piggy(pigo.Pigo):
                 for x in range(4):
                     self.head_left()
                     self.head_right()
-                self.encL(19)
+                self.encL(17)
                 self.set_speed(60, 60)
                 self.half_forward()
                 self.set_speed(self.LEFT_SPEED, self.RIGHT_SPEED)
-                self.encR(19)
+                self.encR(17)
                 self.encF(18)
             time.sleep(.1)
 
