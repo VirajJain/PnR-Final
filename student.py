@@ -71,7 +71,7 @@ class Piggy(pigo.Pigo):
                     self.encR(17)
                     self.encR(17)
                     self.encL(17)
-                    self.x_up()
+                self.x_up()
                 self.half_forward()
             time.sleep(.1)
 
