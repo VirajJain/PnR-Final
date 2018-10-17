@@ -71,8 +71,9 @@ class Piggy(pigo.Pigo):
                     self.encR(17)
                     self.encR(17)
                     self.encL(17)
-                self.x_up()
                 self.half_forward()
+                self.move_right_fully()
+                self.move_left_fully()
             time.sleep(.1)
 
     # YOU DECIDE: How does your GoPiggy dance?
