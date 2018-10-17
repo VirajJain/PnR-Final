@@ -130,11 +130,11 @@ class Piggy(pigo.Pigo):
 
     def move_left_fully(self):
         """"rotate left a full circle"""
-        self.encL(28)
+        self.encL(27)
 
     def move_right_fully(self):
         '''rotate right a full circle'''
-        self.encR(28)
+        self.encR(27)
 
     def chill_short(self):
         """"not move for a short period of time"""
