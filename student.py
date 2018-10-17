@@ -71,6 +71,7 @@ class Piggy(pigo.Pigo):
                     self.encR(17)
                     self.encR(17)
                     self.encL(17)
+                    self.x_up()
                 self.half_forward()
             time.sleep(.1)
 
@@ -157,7 +158,7 @@ class Piggy(pigo.Pigo):
         return True
 
     def finisher(self):
-        '''FINISH HIM'''
+        """FINISH HIM"""
         for x in range(4):
             self.encL(28)
             self.encR(28)
