@@ -184,13 +184,13 @@ class Piggy(pigo.Pigo):
         """scans and estimates the number of obstacles within sight"""
         self.wide_scan()
         found_something = False
-        counter = term.dist(150)
+        counter = 0
         for ang, distance in enumerate(self.scan):
-            if distance and distance < term.dist and not found_something:
+            if distance and distance < 150 and not found_something:
                 found_something = True
                 counter += 1
                 print("Object # %d found, I think" % counter)
-            if distance and distance > term.dist and found_something:
+            if distance and distance > 150 and found_something:
                 found_something = False
         print("\n----I SEE %d OBJECTS----\n" % counter)
 
