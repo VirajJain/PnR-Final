@@ -82,7 +82,7 @@ class Piggy(pigo.Pigo):
                 # turn right
                 self.encR(17)
             # if left is bigger
-            else:
+            if left_total > right_total:
                 # turn left
                 self.encL(17)
         else:
