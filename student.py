@@ -91,7 +91,7 @@ class Piggy(pigo.Pigo):
             # while it's not clear
             while not self.is_clear():
                 # turn
-                self.encL(9)
+                self.encL(5)
             pass
 
 
