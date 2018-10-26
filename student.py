@@ -89,6 +89,7 @@ class Piggy(pigo.Pigo):
         else:
 
             # while it's not clear
+            self.encR(9)
             while not self.is_clear():
                 # turn
                 self.encL(2)
