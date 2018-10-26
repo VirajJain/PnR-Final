@@ -88,8 +88,11 @@ class Piggy(pigo.Pigo):
                 self.encL(17)
         else:
             #turns until clear
+            self.is_clear()
             # while it's not clear
+            if self.is_clear() False:
                 # turn
+                self.encL(9)
             pass
 
 
