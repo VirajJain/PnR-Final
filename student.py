@@ -257,7 +257,7 @@ class Piggy(pigo.Pigo):
             else:
                 self.encL(8)
                 if not self.is_clear():
-                    self.encR(17)
+                    self.encR(20)
                 if not self.is_clear():
                     self.encR(8)
 
