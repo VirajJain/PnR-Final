@@ -255,10 +255,15 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
+                #checks left
                 self.encL(7)
+                #if not safe on left
                 if not self.is_clear():
+                    #check right
                     self.encR(16)
+                #if right isn't safe
                 if not self.is_clear():
+                    #go back the way it came
                     self.encR(8)
 
     def cruise(self):
