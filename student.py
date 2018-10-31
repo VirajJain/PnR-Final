@@ -19,7 +19,7 @@ class Piggy(pigo.Pigo):
         # Our servo turns the sensor. What angle of the servo( ) method sets it straight?
         self.MIDPOINT = 92
         # YOU DECIDE: How close can an object get (cm) before we have to stop?
-        self.SAFE_STOP_DIST = 30
+        self.SAFE_STOP_DIST = 20
         self.HARD_STOP_DIST = 15
         # YOU DECIDE: What left motor power helps straighten your fwd()?
         self.LEFT_SPEED = 140
@@ -255,7 +255,26 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                self.encR(8)
+                left_total = 0
+                right_total = 0
+                # loop from self.MIDPOINT - 60 to self.MIDPOINT
+                for angle in range(self.MIDPOINT - 60, self.MIDPOINT):
+                    if self.scan[angle]:
+                        # add up the numbers to right_total
+                        right_total += self.scan[angle]
+                # loop from self.MIDPOINT to self.MIDPOINT + 60
+                for angle in range(self.MIDPOINT, self.MIDPOINT + 60):
+                    # add up the numbers to left_total
+                    if self.scan[angle]:
+                        left_total += self.scan[angle]
+                # if right is bigger:
+                if right_total > left_total:
+                    # turn right
+                    self.encR(17)
+                # if left is bigger
+                if left_total > right_total:
+                    # turn left
+                    self.encL(17)
                 #don't have a perfect right turn :(
 
     def cruise(self):
