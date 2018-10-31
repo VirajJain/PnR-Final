@@ -255,26 +255,11 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                left_total = 0
-                right_total = 0
-                # loop from self.MIDPOINT - 60 to self.MIDPOINT
-                for angle in range(self.MIDPOINT - 60, self.MIDPOINT):
-                    if self.scan[angle]:
-                        # add up the numbers to right_total
-                        right_total += self.scan[angle]
-                # loop from self.MIDPOINT to self.MIDPOINT + 60
-                for angle in range(self.MIDPOINT, self.MIDPOINT + 60):
-                    # add up the numbers to left_total
-                    if self.scan[angle]:
-                        left_total += self.scan[angle]
-                # if right is bigger:
-                if right_total > left_total:
-                    # turn right
-                    self.encR(20)
-                # if left is bigger
-                if left_total > right_total:
-                    # turn left
-                    self.encL(20)
+                self.encL(8)
+                if not self.is_clear():
+                    self.encR(17)
+                if not self.is_clear():
+                    self.encR(8)
 
     def cruise(self):
         """ drive straight while path is clear """
