@@ -274,8 +274,7 @@ class Piggy(pigo.Pigo):
                 # if left is bigger
                 if left_total > right_total:
                     # turn left
-                    self.encL(17)
-                #don't have a perfect right turn :(
+                    self.encL(8)
 
     def cruise(self):
         """ drive straight while path is clear """
