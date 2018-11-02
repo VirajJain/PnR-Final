@@ -260,7 +260,7 @@ class Piggy(pigo.Pigo):
                 #if not safe on left
                 if not self.is_clear():
                     #check right
-                    self.encR(16)
+                    self.encR(15)
                 #if right isn't safe
                 if not self.is_clear():
                     #go back the way it came
