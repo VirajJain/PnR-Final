@@ -265,7 +265,7 @@ class Piggy(pigo.Pigo):
                 #if right isn't safe
                 if not self.is_clear():
                     #go back the way it came
-                    self.encR(7)
+                    self.encR(6)
 
     def cruise(self):
         """ drive straight while path is clear """
