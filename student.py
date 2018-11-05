@@ -206,6 +206,20 @@ class Piggy(pigo.Pigo):
                 self.servo(self.MIDPOINT + 20)
                 self.servo(self.MIDPOINT - 20)
 
+    def turn_right_until_clear(self):
+        """checks everything on right for maze"""
+        # while it's not clear
+        while not self.is_clear():
+            # turn
+            self.encR(1)
+
+    def turn_left_until_clear(self):
+        """checks everything on left for maze"""
+        # while it's not clear
+        while not self.is_clear():
+            # turn
+            self.encL(1)
+
 ###From Ricky
     def x_up(self):
         """supposed to make an X formation"""
@@ -251,21 +265,17 @@ class Piggy(pigo.Pigo):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
+        right_next = True
         while True:
             if self.is_clear():
                 self.cruise()
             else:
-                #checks left
-                self.encL(7)
-                #if not safe on left
-                if not self.is_clear():
-                    #check right
-                    self.encR(15)
-                    self.encR(1)
-                #if right isn't safe
-                if not self.is_clear():
-                    #go back the way it came
-                    self.encR(6)
+                if right_next:
+                    self.turn_right_until_clear()
+                    right_next = False
+                else:
+                    self.turn_left_until_clear()
+                    right_next = True
 
     def cruise(self):
         """ drive straight while path is clear """
