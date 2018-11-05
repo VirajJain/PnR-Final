@@ -211,14 +211,14 @@ class Piggy(pigo.Pigo):
         # while it's not clear
         while not self.is_clear():
             # turn
-            self.encR(1)
+            self.encR(3)
 
     def turn_left_until_clear(self):
         """checks everything on left for maze"""
         # while it's not clear
         while not self.is_clear():
             # turn
-            self.encL(1)
+            self.encL(3)
 
 ###From Ricky
     def x_up(self):
