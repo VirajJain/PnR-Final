@@ -272,10 +272,12 @@ class Piggy(pigo.Pigo):
             else:
                 # keeps getting too close to boxes
                 # can't make it turn correctly
+                self.encB(5)
                 if count < 2:
                     self.turn_left_until_clear()
                     count += 1
                 else:
+                    self.encB(5)
                     self.turn_right_until_clear()
                     count += 1
                     if count == 4:
