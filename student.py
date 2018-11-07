@@ -208,6 +208,7 @@ class Piggy(pigo.Pigo):
 
     def turn_right_until_clear(self):
         """checks everything on right for maze"""
+        self.encB(5)
         # while it's not clear
         while not self.is_clear():
             # turn
@@ -215,6 +216,7 @@ class Piggy(pigo.Pigo):
 
     def turn_left_until_clear(self):
         """checks everything on left for maze"""
+        self.encB(5)
         # while it's not clear
         while not self.is_clear():
             # turn
@@ -271,12 +273,10 @@ class Piggy(pigo.Pigo):
                 self.cruise()
             else:
                 # keeps getting too close to boxes
-                self.encB(5)
                 if count < 2:
                     self.turn_left_until_clear()
                     count += 1
                 else:
-                    self.encB(5)
                     self.turn_right_until_clear()
                     count += 1
                     if count == 4:
