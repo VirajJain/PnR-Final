@@ -265,17 +265,19 @@ class Piggy(pigo.Pigo):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-        right_next = True
+        count = 0
         while True:
             if self.is_clear():
                 self.cruise()
             else:
-                if right_next:
+                if count < 2:
                     self.turn_right_until_clear()
-                    right_next = False
+                    count += 1
                 else:
                     self.turn_left_until_clear()
-                    right_next = True
+                    count += 1
+                    if count == 4:
+                        count = 0
 
     def cruise(self):
         """ drive straight while path is clear """
