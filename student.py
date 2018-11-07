@@ -20,7 +20,7 @@ class Piggy(pigo.Pigo):
         self.MIDPOINT = 92
         # YOU DECIDE: How close can an object get (cm) before we have to stop?
         self.SAFE_STOP_DIST = 40
-        self.HARD_STOP_DIST = 20
+        self.HARD_STOP_DIST = 30
         # YOU DECIDE: What left motor power helps straighten your fwd()?
         self.LEFT_SPEED = 140
         # YOU DECIDE: What left motor power helps straighten your fwd()?
@@ -271,7 +271,6 @@ class Piggy(pigo.Pigo):
                 self.cruise()
             else:
                 # keeps getting too close to boxes
-                # can't make it turn correctly
                 self.encB(5)
                 if count < 2:
                     self.turn_left_until_clear()
