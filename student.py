@@ -270,13 +270,15 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                if count < 2:
+                # keeps getting too close to boxes
+                # can't make it turn correctly
+                if count < 1:
                     self.turn_right_until_clear()
                     count += 1
                 else:
                     self.turn_left_until_clear()
                     count += 1
-                    if count == 4:
+                    if count == 3:
                         count = 0
 
     def cruise(self):
