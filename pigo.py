@@ -184,7 +184,7 @@ class Pigo(object):
             print("Degree: "+str(x)+", distance: "+str(scan1))
             time.sleep(.01)
 
-    def is_clear(self):
+    def is_clear(self, d=None):
         """does a 3-point scan around the midpoint, returns false if a test fails"""
         print("Running the is_clear method.")
         for x in range((self.MIDPOINT - 15), (self.MIDPOINT + 15), 5):
@@ -199,6 +199,11 @@ class Pigo(object):
                 scan1 = (scan1 + scan2 + scan3) / 3
             self.scan[x] = scan1
             print("Degree: " + str(x) + ", distance: " + str(scan1))
+            if d and scan1 < d:
+                print("Doesn't look clear to me")
+                return False
+            elif d:
+                return True
             if scan1 < self.SAFE_STOP_DIST:
                 print("Doesn't look clear to me")
                 return False

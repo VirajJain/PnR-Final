@@ -210,7 +210,7 @@ class Piggy(pigo.Pigo):
         """checks everything on right for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear():
+        while not self.is_clear(d=self.SAFE_STOP_DIST * 2):
             # turn
             self.encR(5)
 
@@ -218,7 +218,7 @@ class Piggy(pigo.Pigo):
         """checks everything on left for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear():
+        while not self.is_clear(d=self.SAFE_STOP_DIST * 2):
             # turn
             self.encL(5)
 
@@ -286,7 +286,7 @@ class Piggy(pigo.Pigo):
         """ drive straight while path is clear """
         self.fwd()
         while self.dist() > self.SAFE_STOP_DIST:
-            time.sleep(.001)
+            time.sleep(.01)
         self.stop()
 ####################################################
 ############### STATIC FUNCTIONS
