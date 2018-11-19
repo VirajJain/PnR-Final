@@ -210,7 +210,7 @@ class Piggy(pigo.Pigo):
         """checks everything on right for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear(d=self.SAFE_STOP_DIST * 2):
+        while not self.is_clear(d=self.SAFE_STOP_DIST + 80):
             # turn
             self.encR(2)
 
@@ -218,7 +218,7 @@ class Piggy(pigo.Pigo):
         """checks everything on left for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear(d=self.SAFE_STOP_DIST * 2):
+        while not self.is_clear(d=self.SAFE_STOP_DIST + 80):
             # turn
             self.encL(2)
 
