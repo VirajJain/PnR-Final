@@ -292,6 +292,7 @@ class Piggy(pigo.Pigo):
 
     def cruise(self):
         """ drive straight while path is clear """
+        print("-----------! LET'S CRUISE !------------\n")
         self.fwd()
         while self.dist() > self.SAFE_STOP_DIST:
             time.sleep(.01)
