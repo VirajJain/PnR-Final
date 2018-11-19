@@ -210,7 +210,7 @@ class Piggy(pigo.Pigo):
         """checks everything on right for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear(d=self.SAFE_STOP_DIST + 80):
+        while not self.is_clear(d=self.SAFE_STOP_DIST + 60):
             # turn
             self.encR(2)
 
@@ -218,7 +218,7 @@ class Piggy(pigo.Pigo):
         """checks everything on left for maze"""
         self.encB(8)
         # while it's not clear
-        while not self.is_clear(d=self.SAFE_STOP_DIST + 80):
+        while not self.is_clear(d=self.SAFE_STOP_DIST + 60):
             # turn
             self.encL(2)
 
@@ -268,10 +268,18 @@ class Piggy(pigo.Pigo):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         count = 0
+        turn_counter = 0 # how many turns in a row do we try to make?
         while True:
             if self.is_clear():
+                turn_counter = 0
                 self.cruise()
             else:
+                # TODO: AVOID GETTING CAUGHT IN LOOP
+                turn_counter += 1
+                if turn_counter > 5:
+                    # do something different
+                    self.encR(15)
+
                 # keeps getting too close to boxes
                 if count < 2:
                     self.turn_left_until_clear()
