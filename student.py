@@ -278,7 +278,9 @@ class Piggy(pigo.Pigo):
                 turn_counter += 1
                 if turn_counter > 5:
                     # do something different
-                    self.encR(15)
+                    self.encB(18)
+                    self.encR(8)
+
 
                 # keeps getting too close to boxes
                 if count < 2:
