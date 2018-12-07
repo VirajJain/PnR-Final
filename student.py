@@ -285,10 +285,10 @@ class Piggy(pigo.Pigo):
 
                 # keeps getting too close to boxes
                 if count < 2:
-                    self.turn_left_until_clear()
+                    self.turn_right_until_clear()
                     count += 1
                 else:
-                    self.turn_right_until_clear()
+                    self.turn_left_until_clear()
                     count += 1
                     if count >= 4:
                         count = 0
