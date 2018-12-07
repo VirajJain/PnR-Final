@@ -212,7 +212,7 @@ class Piggy(pigo.Pigo):
         # while it's not clear
         while not self.is_clear(d=self.SAFE_STOP_DIST + 60):
             # turn
-            self.encR(1)
+            self.encR(2)
 
     def turn_left_until_clear(self):
         """checks everything on left for maze"""
@@ -220,7 +220,7 @@ class Piggy(pigo.Pigo):
         # while it's not clear
         while not self.is_clear(d=self.SAFE_STOP_DIST + 60):
             # turn
-            self.encL(1)
+            self.encL(2)
 
 ###From Ricky
     def x_up(self):
@@ -290,7 +290,7 @@ class Piggy(pigo.Pigo):
                 else:
                     self.turn_right_until_clear()
                     count += 1
-                    if count == 4:
+                    if count >= 4:
                         count = 0
 
     def cruise(self):
