@@ -209,6 +209,7 @@ class Piggy(pigo.Pigo):
     def turn_right_until_clear(self):
         """checks everything on right for maze"""
         self.encB(8)
+        self.servo(self.MIDPOINT)
         # while it's not clear
         while not self.is_clear(d=self.SAFE_STOP_DIST + 60):
             # turn
