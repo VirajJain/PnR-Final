@@ -285,13 +285,13 @@ class Piggy(pigo.Pigo):
 
 
                 # keeps getting too close to boxes
-                if count < 2:
+                if count < 1:
                     self.turn_right_until_clear()
                     count += 1
                 else:
                     self.turn_left_until_clear()
                     count += 1
-                    if count >= 4:
+                    if count >= 2:
                         count = 0
 
     def cruise(self):
