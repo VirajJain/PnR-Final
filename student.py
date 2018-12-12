@@ -268,16 +268,14 @@ class Piggy(pigo.Pigo):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-        count = 0
-        turn_counter = 0  # how many turns in a row do we try to make?
+        count = 0  # how many turns in a row do we try to make?
         while True:
             if self.is_clear():
-                turn_counter = 0
                 self.cruise()
             else:
                 # TODO: AVOID GETTING CAUGHT IN LOOP
-                turn_counter += 1
-                if turn_counter > 5:
+                count += 1
+                if count > 5:
                     # do something different
                     raw_input("Hey, what's up?")
                     self.encB(18)
