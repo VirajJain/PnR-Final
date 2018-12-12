@@ -273,7 +273,6 @@ class Piggy(pigo.Pigo):
             if self.is_clear():
                 self.cruise()
             else:
-                # TODO: AVOID GETTING CAUGHT IN LOOP
                 count += 1
                 if count > 5:
                     # do something different
